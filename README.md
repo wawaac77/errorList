@@ -18,7 +18,7 @@
      
     
 **3. 新版login替换旧版login时，直接删除了代码中新版login web page没有返回的一个parameter，导致scan那部分功能因为有parameter是Null而crash**    
-   (_2018-8-22 my responsibility: code review_)
+   (_2018-8-23 my responsibility: code review_)
   
    1. 删除parameter前要search整个project看是否影响其他地方。  
    
