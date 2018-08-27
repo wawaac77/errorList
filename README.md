@@ -3,9 +3,9 @@
 
 **1. Banner click所指向的登录页面，应该是旧版，却指向了还在UAT阶段的新版**   
    
-   i. 在整个project都是新版login的branch中，我通过搜索loginViewController这个keyword，将全部位置替换成旧版login，做漏了一个位置。替换过程中，我有a.计算改过位置+不需更改位置，是否等于keyword搜索结果的总数；b.最后搜索loginViewController看是否有漏网之鱼。结果还是遗漏了一个位置，说明开发完再试下app的每个位置也是很重要的。
+   1. 在整个project都是新版login的branch中，我通过搜索loginViewController这个keyword，将全部位置替换成旧版login，做漏了一个位置。替换过程中，我有a.计算改过位置+不需更改位置，是否等于keyword搜索结果的总数；b.最后搜索loginViewController看是否有漏网之鱼。结果还是遗漏了一个位置，说明开发完再试下app的每个位置也是很重要的。
    
-   ii. 多人maintain同一个project时，如果有人使用了我的branch，要确保已经是自己检查过的，最好不要使用开发一半的。   
+   2. 多人maintain同一个project时，如果有人使用了我的branch，要确保已经是自己检查过的，最好不要使用开发一半的。   
 
 
 **2. 新版login网页的url，在release版本中，应该指向Production，却指向了UAT**   
