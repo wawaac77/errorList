@@ -10,9 +10,9 @@
 
 **2. 新版login网页的url，在release版本中，应该指向Production，却指向了UAT**   
   
-   1> 此url经过middleware再redirect去另外的url，这个新加的api，我应该在release之前再重点检查一次。因为缺少怀疑精神，和一点懒惰，没有去重新检查，导致没有发现domain被hard code的错误。  
+   1. 此url经过middleware再redirect去另外的url，这个新加的api，我应该在release之前再重点检查一次。因为缺少怀疑精神，和一点懒惰，没有去重新检查，导致没有发现domain被hard code的错误。  
    
-   2> 这种UAT和Production用不同domain的情况，应该将其group到同一个位置，所有url的domain都从同一个位置控制，减少漏查的情况。  
+   2. 这种UAT和Production用不同domain的情况，应该将其group到同一个位置，所有url的domain都从同一个位置控制，减少漏查的情况。  
    
-   3> UAT和Production的控制，以及其他容错率低的位置，因iOS审批时间的原因，最好不要hard code，最好可以从backend控制，是其更灵活。   
+   3. UAT和Production的控制，以及其他容错率低的位置，因iOS审批时间的原因，最好不要hard code，最好可以从backend控制，是其更灵活。   
    
