@@ -25,6 +25,7 @@
    1. 删除parameter前要search整个project看是否影响其他地方。  
    
 **4. Xcode “Cannot parse contents of Info.plist”** 
+
    (_2018-8-28_)
    1. To know which line is wrong: go the directory where the plist file is present, then write this command on terminal-> plutil filename.plist
    2. Because I didn's select build no when merge. Then info.plist kept both and caused parsing error
