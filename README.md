@@ -36,22 +36,23 @@
 **5. Player - signed cookie** 
 
    (_2018-9-14_)
-   //    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:@{
-//                                                                NSHTTPCookieName: @"hdnts",
-//                                                                NSHTTPCookieValue: @"st=1532661489~exp=1532747889~acl=/*~hmac=3ddac6b125b38eb91de4768735fb3afab9cd6ff1a6527b3c5472f492668b7620",
-//                                                                NSHTTPCookieDomain: @"lem-hkt-demo.akamaized.net",
-//                                                                NSHTTPCookiePath: @"/"
-//                                                                }];
-//    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
-//    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
-//    NSLog(@"cookie %@", cookies[0]);
-//    AVURLAsset * asset = [AVURLAsset URLAssetWithURL:urlLiveStreaming options:@{AVURLAssetHTTPCookiesKey:cookies}];
-//    AVPlayerItem * item = [AVPlayerItem playerItemWithAsset:asset];
-//
-//    _playerViewController = [[AVPlayerViewController alloc] init];
-//    _playerViewController.player = [AVPlayer playerWithPlayerItem:item];
-//    _playerViewController.view.frame = self.view.bounds;
-//    _playerViewController.videoGravity = AVLayerVideoGravityResize;
-//    _playerViewController.showsPlaybackControls = YES;
-//    [_playerViewController.player play]; //start play
+    NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:@{
+                                                                NSHTTPCookieName: @"hdnts",
+                                                                NSHTTPCookieValue: @"st=1532661489~exp=1532747889~acl=/*~hmac=3ddac6b125b38eb91de4768735fb3afab9cd6ff1a6527b3c5472f492668b7620",
+                                                                NSHTTPCookieDomain: @"lem-hkt-demo.akamaized.net",
+                                                                NSHTTPCookiePath: @"/"
+                                                                }];
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:cookie];
+    NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
+    NSLog(@"cookie %@", cookies[0]);
+    AVURLAsset * asset = [AVURLAsset URLAssetWithURL:urlLiveStreaming options:@{AVURLAssetHTTPCookiesKey:cookies}];
+    AVPlayerItem * item = [AVPlayerItem playerItemWithAsset:asset];
+
+    _playerViewController = [[AVPlayerViewController alloc] init];
+    _playerViewController.player = [AVPlayer playerWithPlayerItem:item];
+    _playerViewController.view.frame = self.view.bounds;
+    _playerViewController.videoGravity = AVLayerVideoGravityResize;
+    _playerViewController.showsPlaybackControls = YES;
+    [_playerViewController.player play]; //start play
+
    
